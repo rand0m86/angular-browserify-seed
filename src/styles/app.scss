@@ -1,22 +1,29 @@
-@import "variables";
-@import "imports";
+@import "reset";
 
-body {
-  text-align: center;
-  color: #222;
+html, body {
+    height: 100%;
 }
 
-.welcome {
-  width: 300px;
-  height: 510px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -150px;
-  margin-top: -255px;
+.container {
+    min-height: 100%;
+    margin: 0 auto -64px;
+    max-width: 960px;
 }
 
-a, a:visited {
-  text-decoration: none;
+.container:after {
+    height: 64px;
+    content: "";
+    display: block;
 }
 
+footer {
+    margin: 0 auto;
+    height: 64px;
+    max-width: 960px;
+}
+
+md-card-content h3 {
+    max-height: 16px;
+    overflow: hidden;
+    text-align: center;
+}

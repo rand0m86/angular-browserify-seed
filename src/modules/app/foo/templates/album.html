@@ -1,0 +1,25 @@
+<md-content endless-scroll add-items="addImages()">
+    <md-toolbar md-scroll-shrink>
+        <div class="md-toolbar-tools">Album: {{albumId}}</div>
+    </md-toolbar>
+    <div ng-hide="loaded" layout="row" layout-align="center center">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div layout="row" layout-wrap layout-padding>
+        <div ng-repeat="image in images" flex="33" flex-md="50" flex-sm="100">
+            <md-card>
+                <a ng-href="#/image/{{image.id}}">
+                    <img ng-src="{{image.url}}">
+                </a>
+                <md-card-content>
+                    <h3>{{image.title}}</h3>
+                </md-card-content>
+                <div class="md-actions" layout="row" layout-align="end center">
+                    <md-button aria-label="album" ng-href="#/album/{{image.albumId}}" class="md-icon-button">
+                        <md-icon md-svg-icon="album"></md-icon>
+                    </md-button>
+                </div>
+            </md-card>
+        </div>
+    </div>
+</md-content>

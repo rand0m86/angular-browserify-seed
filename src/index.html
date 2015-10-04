@@ -3,11 +3,41 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery App</title>
     <!--bowerStyles-->
     <!--styles-->
 </head>
 <body>
-<div class="container" ng-view></div>
+<div ng-controller="headerController" class="container">
+    <md-fab-toolbar md-open="state.isOpen" md-direction="{{state.selectedDirection}}" >
+        <md-fab-trigger class="align-with-text">
+            <md-button class="md-fab md-primary" aria-label="menu">
+                <md-icon md-svg-icon="menu"></md-icon>
+            </md-button>
+        </md-fab-trigger>
+        <md-toolbar>
+            <md-fab-actions class="md-toolbar-tools">
+                <md-button aria-label="home" class="md-icon-button" ng-click="loadHome()">
+                    <md-icon md-svg-icon="home"></md-icon>
+                </md-button>
+                <md-button aria-label="google" class="md-icon-button" ng-href="https://google.com" target="_blank">
+                    <md-icon md-svg-icon="google"></md-icon>
+                </md-button>
+            </md-fab-actions>
+        </md-toolbar>
+    </md-fab-toolbar>
+    <div ng-view></div>
+</div>
+<footer>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span>Vitalii</span>
+            <md-button aria-label="github" class="md-icon-button" ng-href="https://github.com/rand0m86/angular-browserify-seed" target="_blank">
+                <md-icon md-svg-icon="github"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+</footer>
 <!--scripts-->
 <!--config-->
 </body>

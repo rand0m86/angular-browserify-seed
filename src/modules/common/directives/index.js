@@ -2,4 +2,4 @@
 
 module.exports =
     angular.module('expressly.common.directives', [])
-        .directive('exampleDirective', require('./example.directive'));
+        .directive('endlessScroll', require('./endlessScroll.directive.js'));

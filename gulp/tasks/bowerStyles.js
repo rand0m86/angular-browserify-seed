@@ -4,11 +4,11 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var gulpif = require('gulp-if');
 var rename = require('gulp-rename');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 
 var sassOptions = {
-    style: 'compressed', 
-    'sourcemap=none': true 
+    style: 'compressed',
+    'sourcemap=none': true
 }
 
 function handleError(err) {
